@@ -55,9 +55,24 @@ def return_1_7_2():
         return return_1_7_2()
     return temp
 
+# 从01固定不等概率  -> 01等概率
+def return_01_unequal_probability():
+    temp =random.random()
+    if temp < 0.3:
+        return 0
+    else:
+        return 1
+def return_01_equal_probability():
+    temp = (return_01_unequal_probability()<<1) + return_01_unequal_probability()
+    if temp == 0 or temp == 3:
+        return return_01_equal_probability()
+    elif temp ==1:
+        return 0
+    else:
+        return 1
 
 
-
+###====================================###
 
 
 

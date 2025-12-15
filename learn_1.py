@@ -1,4 +1,4 @@
-
+from numpy import random
 
 
 import os
@@ -52,8 +52,6 @@ def maopao(list: list):
                 swap(list, j, j-1)
     return list
 
-
-
 def xuanze(list:list):
     if len(list) == 0 or len(list) == 1:
         return list
@@ -63,5 +61,20 @@ def xuanze(list:list):
             swap(list, j, j-1)
             j -= 1
     return list
-test = [2,3, 1, 5, 4]
-print(xuanze(test))
+
+#创建一个随机数组
+def create_random_array(max_length: int, max_value: int):
+    length = random.randint(1, max_length)
+    list = []
+    for i in range(length):
+        list.append(random.randint(1, max_value))
+    return list
+
+# 验证数组是否有序
+def is_sorted(list: list):
+    max_value = list[0]
+    for i in range(1, len(list)):
+        if list[i] < max_value:
+            return False
+        max_value = list[i]
+    return True
