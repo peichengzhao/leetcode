@@ -1,0 +1,30 @@
+# 环境/IDE
+.env
+.vscode/
+__pycache__/
+*.pyc
+
+# 模型权重与 checkpoint（体积过大，GitHub 无法推送）
+*.safetensors
+*.pth
+*.pt
+*.bin
+*.ckpt
+optimizer.pt
+adapter_model.*
+
+# 大型 ML 项目与数据集（本地保留，不上传）
+LLM_learn/
+LlamaFactory/
+Megatron-LM/
+基础班/DrAttack/
+基础班/leetcode_mianshi_150/search/
+基础班/leetcode_mianshi_150/vnpy/
+基础班/leetcode_mianshi_150/LlamaFactory/
+基础班/leetcode_mianshi_150/llm_stock_quant/
+基础班/leetcode_mianshi_150/MASS/
+
+# 杂项大文件
+*.pdf
+file?fileKey=*
+editable-web/

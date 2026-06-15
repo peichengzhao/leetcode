@@ -1,0 +1,12 @@
+from typing import List
+class Solution:
+    def findMin(self, nums: List[int]) -> int:
+        left, right = 0, len(nums)-1
+        while left < right:
+            middle = (left + right) // 2
+            if nums[middle] > nums[right]:
+                #说明 middle在左侧
+                left = middle+1
+            else:
+                right = middle 
+        return nums[left] 

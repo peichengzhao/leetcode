@@ -1,0 +1,15 @@
+
+from typing import List
+
+class Solution:
+    def isPalindrome(self, x: int) -> bool:
+        if len(x) == 1:
+            return True
+        str_x = str(x)
+        i, j = 0, len(str_x)-1
+        while i < j:
+            if str_x[i] != str_x[j]:
+                return False
+            i += 1
+            j -= 1
+        return True

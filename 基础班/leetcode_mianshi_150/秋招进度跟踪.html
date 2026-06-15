@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>秋招进度跟踪</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      margin: 0;
+      padding: 24px;
+      background: #f5f6f8;
+      color: #1a1a1a;
+    }
+    h1 { font-size: 1.35rem; margin: 0 0 8px; }
+    .hint {
+      font-size: 0.85rem;
+      color: #555;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+    .wrap {
+      overflow: auto;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 1px 4px rgba(0,0,0,.08);
+    }
+    table {
+      border-collapse: collapse;
+      width: max-content;
+      min-width: 100%;
+      font-size: 13px;
+    }
+    th, td {
+      border: 1px solid #e0e0e0;
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: top;
+      max-width: 200px;
+      word-break: break-word;
+    }
+    th {
+      background: #2d5a87;
+      color: #fff;
+      font-weight: 600;
+      position: sticky;
+      top: 0;
+      z-index: 1;
+    }
+    tr:nth-child(even) td { background: #fafbfc; }
+    tr:hover td { background: #eef4fa; }
+    .status-挂 { color: #c0392b; font-weight: 600; }
+    .status-offer { color: #27ae60; font-weight: 600; }
+    .status-进行中 { color: #2980b9; }
+  </style>
+</head>
+<body>
+  <h1>秋招进度跟踪</h1>
+  <p class="hint">
+    在浏览器里查看表格（排版正常）。<br />
+    编辑数据请改 <strong>秋招进度跟踪.md</strong>（Cursor 里按 <kbd>Ctrl+Shift+V</kbd> 预览），
+    或用 Excel / WPS 打开 <strong>秋招进度跟踪.csv</strong>。
+  </p>
+  <div class="wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>序号</th><th>公司</th><th>部门/业务</th><th>岗位</th><th>城市</th>
+          <th>投递渠道</th><th>内推人</th><th>投递日期</th><th>当前状态</th><th>流程进度</th>
+          <th>挂/拒阶段</th><th>挂/拒原因</th><th>笔试时间</th><th>最近面试</th>
+          <th>下一步</th><th>Offer/薪资</th><th>优先级</th><th>备注</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td><td>示例科技</td><td>云原生</td><td>后端开发</td><td>北京</td>
+          <td>内推</td><td>张三</td><td>2026-05-01</td>
+          <td class="status-挂">已挂</td><td>笔试→一面</td><td>一面</td><td>八股+项目</td>
+          <td>2026-05-10</td><td>2026-05-18 一面</td><td></td><td></td><td>高</td>
+          <td>复盘：Redis 持久化没答好</td>
+        </tr>
+        <tr>
+          <td>2</td><td colspan="7"></td><td class="status-进行中">待投递</td>
+          <td colspan="9"></td>
+        </tr>
+        <tr>
+          <td>3</td><td colspan="17"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
